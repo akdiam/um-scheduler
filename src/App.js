@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom'
+import Scroller from './scroller'
+//import Scroller from './scroller'
+import 'react-week-calendar/dist/style.css';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                {/*<div className="left-div">
+                    <h3 style={{textAlign:'center'}}>test react-week-calendar</h3>
+                    <Scroller/>
+                </div>*/}
+                <Scroller/>
+            </div>
+        );
+    }
 }
+ReactDOM.render(
+    <App />,
+    document.getElementById('root'),
+)
 
-export default App;
+

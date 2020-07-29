@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+html, body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    min-height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left-div{
+    text-align: center;
+    float: left;
+    width:45%;
+    padding-left: 35px;
+    min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.right-div {
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 50%;
+    float: right;
+    display: grid;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weekCalendar{
+    position: relative;
+    float: right;
+    left: auto;
+    right: 20px;
+    top: 20px;
+    box-sizing:border-box;
+    width:100%;height:100%;
+    overflow:hidden;
+    padding-left:125px;
+    padding-top:28px;
+    color:#6b6b6b;
+    grid-row: 1;
+}
+
+.event{
+    position:relative;
+    border-radius: 3px;
+    overflow:hidden;
+    width:100%;height:100%;
+    outline: darkblue;
+    outline-width: 2px;
+    color: #4a4242;
+    background-color:#8fcaf9; 
+    font-size: x-small;
+}
+
+.btn {
+    position: relative;
+    display: grid;
+    grid-template-columns: 64px 64px 64px;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    min-height: 5vh;
+    margin: 20px auto;
+    grid-row: 2;
+    text-align: center;
+}
+
+.pages {
+    text-align: center;
+    top: 20px;
+    font-size: large;
+    line-height: 55px;
+}
+
+.container{
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    font-family: Roboto, sans-serif;
 }
